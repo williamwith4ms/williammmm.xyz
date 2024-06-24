@@ -1,5 +1,5 @@
 function copyEmail() {
-	const email = "me@williammmmm.xyz";
+	const email = "me@williammmm.xyz";
 	navigator.clipboard
 		.writeText(email)
 		.then(() => {
@@ -19,7 +19,7 @@ function copyEmail() {
 }
 
 function copyDiscord() {
-	const username = "me@williammmmm.xyz";
+	const username = "williamwith4ms";
 	navigator.clipboard
 		.writeText(username)
 		.then(() => {
