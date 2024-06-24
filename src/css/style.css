@@ -3,8 +3,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     background-color: #FFF;
-    color: #000;
-
+    color: #242424;
 }
 
 .flex-container {
@@ -12,8 +11,16 @@
 }
 
 .sidebar {
-    flex: 0 0 350px;
+    flex: 0 0 20%;
     height: 100vh;
+}
+
+.nav {
+    display: flex;
+    height: 15%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5%;
 }
 
 .content {
@@ -24,12 +31,26 @@
 .social-bar {
     display: flex;
     flex-direction: row;    
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
 
 .social-icon {
     margin-right: 10px;
     height: 24px;
     width: 24px;
+}
+
+.icon-svg {
+    width:24px;
+    height:24px;
+    fill: #242424;
+    stroke: #242424;
+}
+
+.icon-svg:hover {
+    fill: #ADD8E6;
+    stroke: #ADD8E6;
 }
 
 .copy-button {
@@ -46,5 +67,5 @@
 body {
     margin-left: 20%;
     margin-right: 15%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
