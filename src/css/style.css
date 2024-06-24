@@ -1,29 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Global Styles */
+:root {
+    --backgrounder-color: #FFF;
+    --background-color: #FFF;
+    --text-color: #242424;
+    --accent-color: #ADD8E6;
+}
+
+.dark-theme {
+    --backgrounder-color: #141414;
+    --background-color: #242424;
+    --text-color: #FFF;
+    --accent-color: #ADD8E6;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+}
+
+
 * {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF;
-    color: #000;
-
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
+/* Flex Container */
 .flex-container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
+/* Sidebar */
 .sidebar {
-    flex: 0 0 350px;
+    flex: 0 0 12%;
     height: 100vh;
 }
 
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width */
+        height: auto; /* Adjust height to content */
+    }
+
+    .social-bar {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    height: 7%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Content */
 .content {
     flex-grow: 1;
     word-wrap: break-word;
+    max-width: 800px;
+    width: 100%;
+    flex-shrink: 1;
 }
 
+/* Social Bar */
 .social-bar {
     display: flex;
     flex-direction: row;    
+    margin-top: 15%;
+    margin-bottom: 15%;
 }
 
 .social-icon {
@@ -32,6 +100,19 @@
     width: 24px;
 }
 
+.icon-svg {
+    width:24px;
+    height:24px;
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+.icon-svg:hover {
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
+}
+
+/* Copy Button */
 .copy-button {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -43,8 +124,7 @@
     margin-right: 10px;
 }
 
+/* Body */
 body {
-    margin-left: 20%;
-    margin-right: 15%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
