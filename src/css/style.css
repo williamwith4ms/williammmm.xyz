@@ -2,12 +2,14 @@
 
 /* Global Styles */
 :root {
+    --backgrounder-color: #FFF;
     --background-color: #FFF;
     --text-color: #242424;
     --accent-color: #ADD8E6;
 }
 
 .dark-theme {
+    --backgrounder-color: #141414;
     --background-color: #242424;
     --text-color: #FFF;
     --accent-color: #ADD8E6;
@@ -19,15 +21,6 @@
     right: 2%;
 }
 
-.theme-toggle label {
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    position: relative;
-    background-color: #ccc;
-    border-radius: 34px;
-    cursor: pointer;
-}
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -38,12 +31,30 @@
 /* Flex Container */
 .flex-container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Sidebar */
 .sidebar {
-    flex: 0 0 20%;
+    flex: 0 0 12%;
     height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%; /* Make sidebar take full width */
+        height: auto; /* Adjust height to content */
+    }
+
+    .social-bar {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
 }
 
 /* Navigation */
@@ -70,6 +81,9 @@
 .content {
     flex-grow: 1;
     word-wrap: break-word;
+    max-width: 800px;
+    width: 100%;
+    flex-shrink: 1;
 }
 
 /* Social Bar */
@@ -112,7 +126,5 @@
 
 /* Body */
 body {
-    margin-left: 20%;
-    margin-right: 15%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
