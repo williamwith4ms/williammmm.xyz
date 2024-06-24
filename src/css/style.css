@@ -1,33 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-* {
-    font-family: 'Roboto', sans-serif;
-    background-color: #FFF;
-    color: #242424;
+/* Global Styles */
+:root {
+    --background-color: #FFF;
+    --text-color: #242424;
+    --accent-color: #ADD8E6;
 }
 
+.dark-theme {
+    --background-color: #242424;
+    --text-color: #FFF;
+    --accent-color: #ADD8E6;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+}
+
+.theme-toggle label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Flex Container */
 .flex-container {
     display: flex;
 }
 
+/* Sidebar */
 .sidebar {
     flex: 0 0 20%;
     height: 100vh;
 }
 
+/* Navigation */
 .nav {
     display: flex;
-    height: 15%;
+    height: 7%;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 5%;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Content */
 .content {
     flex-grow: 1;
     word-wrap: break-word;
 }
 
+/* Social Bar */
 .social-bar {
     display: flex;
     flex-direction: row;    
@@ -44,15 +89,16 @@
 .icon-svg {
     width:24px;
     height:24px;
-    fill: #242424;
-    stroke: #242424;
+    fill: var(--text-color);
+    stroke: var(--text-color);
 }
 
 .icon-svg:hover {
-    fill: #ADD8E6;
-    stroke: #ADD8E6;
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
 }
 
+/* Copy Button */
 .copy-button {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -64,6 +110,7 @@
     margin-right: 10px;
 }
 
+/* Body */
 body {
     margin-left: 20%;
     margin-right: 15%;
